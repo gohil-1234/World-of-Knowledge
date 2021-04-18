@@ -1,0 +1,156 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" />
+    <!-- Google web font "Open Sans" -->
+    <link rel="stylesheet" href="{% static 'note/css/all.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'note/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'note/css/templatemo-style.css' %}" />
+    <title>World of Knowledge</title>
+  </head>
+<!--
+Sided Template
+https://templatemo.com/tm-527-sided
+-->
+  <body>
+    
+    <div class="columns-bg">
+      <marquee>Happy birthday to our Premium User <h2 style="color: red;">Mr.Yuvrajsinh Gohil</h2></marquee>
+      <!-- Logo & Intro -->
+      <section id="logo" class="tm-section-logo">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-12 offset-sm-0 col-md-6 offset-md-6">
+              <div class="tm-site-name-container">
+                <div class="tm-site-name-container-inner">
+                  <h1 class="text-uppercase tm-text-primary tm-site-name">
+                    World of Knowledge
+                  </h1>
+                  <p class="tm-text-primary tm-site-description">
+                    <a href="http://127.0.0.1:8000/upload/">Create New Post</a>
+                    
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Intro -->
+      <section id="intro" class="tm-p-1-section-1">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="tm-section-text-container">
+                <i class="tm-text-white">
+                  <p class="mb-0" style="color: black;">
+                    Welcome guys at the World of Knowledge to get Knowledge as much as possible. World of Knowledge provides you best content which is posted by honest person.You can also
+                    post your Knowledge with other to provide them something new.
+                  </p>
+                </i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+    
+
+      <!-- Beautiful Rollovers -->
+      <section id="gallery">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12 tm-section-title-mb tm-gallery-title-col">
+              <h2 class="tm-section-title-2">Beautiful Posts</h2>
+              <hr class="tm-section-title-underline" />
+            </div>
+
+            
+
+            <div class="col-12">
+              <div class="grid" style="flex-wrap: wrap;">
+
+                {% for post in posts %}
+
+
+                <figure class="effect-duke">
+                  <img
+                    src="{% static 'note/img/forty_image_12.jpg' %}"
+                    alt="Image"
+                    class="img-fluid"
+                  />
+                  <figcaption>
+                    <h2><span style="color: black;">{{ post.title|slice:10 }}</span></h2>
+                    <p>{{ post.content|slice:20 }}</p>
+                    <a href="http://127.0.0.1:8000/post-details/{{post.id}}">View more</a>
+                  </figcaption>
+                </figure>
+
+                {% endfor %}
+                
+              </div>
+            </div> 
+            
+          </div>
+        </div>
+      </section>
+
+
+      
+      
+      <section id="outro">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-12 col-md-6">
+              <div class="tm-section-text-container-5 tm-text-white">
+                <p>
+                  
+                </p>
+               
+              </div>
+            </div>
+
+            <!-- logo section -->
+            <div class="col-sm-12 col-md-6">
+              <div class="tm-section-text-container-6">
+                <a href="https://www.facebook.com/priyanshu.gohil.98/" class="tm-social-icon-container">
+                  <span class="tm-social-icon-container-inner">
+                    <i class="fab fa-facebook-f"></i>
+                  </span>
+                </a>
+                <a href="https://twitter.com/PriyanshuGohil9" class="tm-social-icon-container">
+                  <span class="tm-social-icon-container-inner">
+                    <i class="fab fa-twitter"></i>
+                  </span>
+                </a>
+                <a href="https://www.instagram.com/gohil_priyanshu_11555"  class="tm-social-icon-container">
+                  <span class="tm-social-icon-container-inner">
+                    <i class="fab fa-instagram"></i>
+                  </span>
+                </a>
+                
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <footer class="col-sm-12 col-md-6 offset-md-6 px-md-0">
+              <p class="tm-copyright-text mb-0 tm-text-primary">
+                Copyright &copy; 2021 World of Knowledge <br>
+                
+                - Design: <a rel="nofollow" href="https://www.instagram.com/gohil_priyanshu_11555">gohil_priyanshu_11555</a>
+              </p>
+            </footer>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- /.columns-bg -->
+  </body>
+</html>
